@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Aman Saxena on My programming learnings</title>
-    <link>https://chaiwithcode.com/authors/aman-saxena/</link>
+    <link>https://www.codewithchai.com/authors/aman-saxena/</link>
     <description>Recent content in Aman Saxena on My programming learnings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 22 Dec 2023 13:51:21 +0530</lastBuildDate>
-    <atom:link href="https://chaiwithcode.com/authors/aman-saxena/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.codewithchai.com/authors/aman-saxena/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My Fifth Post</title>
-      <link>https://chaiwithcode.com/my-fifth-post/</link>
+      <link>https://www.codewithchai.com/my-fifth-post/</link>
       <pubDate>Fri, 22 Dec 2023 13:51:21 +0530</pubDate>
-      <guid>https://chaiwithcode.com/my-fifth-post/</guid>
+      <guid>https://www.codewithchai.com/my-fifth-post/</guid>
       <description>this is my first post</description>
     </item>
     <item>
       <title>My fourth Post</title>
-      <link>https://chaiwithcode.com/my-fourth-post/</link>
+      <link>https://www.codewithchai.com/my-fourth-post/</link>
       <pubDate>Fri, 22 Dec 2023 13:51:21 +0530</pubDate>
-      <guid>https://chaiwithcode.com/my-fourth-post/</guid>
+      <guid>https://www.codewithchai.com/my-fourth-post/</guid>
       <description>this is my first post</description>
     </item>
     <item>
       <title>My Second Post</title>
-      <link>https://chaiwithcode.com/my-second-post/</link>
+      <link>https://www.codewithchai.com/my-second-post/</link>
       <pubDate>Fri, 22 Dec 2023 13:51:21 +0530</pubDate>
-      <guid>https://chaiwithcode.com/my-second-post/</guid>
+      <guid>https://www.codewithchai.com/my-second-post/</guid>
       <description>this is my first post</description>
     </item>
     <item>
       <title>My third Post</title>
-      <link>https://chaiwithcode.com/my-third-post/</link>
+      <link>https://www.codewithchai.com/my-third-post/</link>
       <pubDate>Fri, 22 Dec 2023 13:51:21 +0530</pubDate>
-      <guid>https://chaiwithcode.com/my-third-post/</guid>
+      <guid>https://www.codewithchai.com/my-third-post/</guid>
       <description>this is my first post</description>
     </item>
   </channel>
