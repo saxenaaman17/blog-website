@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Authors on My programming learnings</title>
-    <link>https://example.org/authors/</link>
+    <link>https://chaiwithcode.com/authors/</link>
     <description>Recent content in Authors on My programming learnings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 22 Dec 2023 13:51:21 +0530</lastBuildDate>
-    <atom:link href="https://example.org/authors/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://chaiwithcode.com/authors/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Aman Saxena</title>
-      <link>https://example.org/authors/aman-saxena/</link>
+      <link>https://chaiwithcode.com/authors/aman-saxena/</link>
       <pubDate>Fri, 22 Dec 2023 13:51:21 +0530</pubDate>
-      <guid>https://example.org/authors/aman-saxena/</guid>
+      <guid>https://chaiwithcode.com/authors/aman-saxena/</guid>
       <description></description>
     </item>
     <item>
       <title>Ankur Saxena</title>
-      <link>https://example.org/authors/ankur-saxena/</link>
+      <link>https://chaiwithcode.com/authors/ankur-saxena/</link>
       <pubDate>Fri, 22 Dec 2023 13:51:21 +0530</pubDate>
-      <guid>https://example.org/authors/ankur-saxena/</guid>
+      <guid>https://chaiwithcode.com/authors/ankur-saxena/</guid>
       <description></description>
     </item>
   </channel>
