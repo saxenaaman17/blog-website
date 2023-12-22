@@ -1,0 +1,13 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'My programming learnings'
+
+paginate = 2
+
+[params]
+  dateFormat="Jan 2, 2006"
+  description="The fastest blog"
+
+[taxonomies]
+  category="categories"
+  author="authors"
