@@ -367,3 +367,17 @@ a {
     max-width: 475px;
   }
 }
+
+@media (max-width: 480px) {
+  .container {
+    max-width: 440px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 420px) {
+  .links {
+    padding-left: 10px;
+  }
+}

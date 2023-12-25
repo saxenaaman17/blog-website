@@ -1,0 +1,7 @@
+{
+  "devDependencies": {
+    "grunt": "^1.6.1",
+    "string": "^3.3.3",
+    "toml": "^3.0.0"
+  }
+}
