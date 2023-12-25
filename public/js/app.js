@@ -1,10 +1,11 @@
-const mode = localStorage.getItem("mode") || "";
+let mode = localStorage.getItem("mode") || "dark";
 const toggle = document.querySelector(".toggle");
 const body = document.querySelector("body");
 
-// document.body.className = mode;
+body.classList.add(mode);
 
-// toggle.addEventListener("click", () => {
-//   localStorage.setItem("mode", mode === "light" ? "" : "dark");
-//   body.classList.toggle("light");
-// });
+toggle.addEventListener("click", () => {
+  mode = mode === "light" ? "dark" : "light";
+  body.className = mode;
+  localStorage.setItem("mode", mode);
+});

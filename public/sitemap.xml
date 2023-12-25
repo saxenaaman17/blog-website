@@ -2,13 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://www.codewithchai.com/categories/abc/</loc>
-    <lastmod>2023-12-22T13:51:21+05:30</lastmod>
-  </url><url>
     <loc>https://www.codewithchai.com/authors/aman-saxena/</loc>
-    <lastmod>2023-12-22T13:51:21+05:30</lastmod>
-  </url><url>
-    <loc>https://www.codewithchai.com/authors/ankur-saxena/</loc>
     <lastmod>2023-12-22T13:51:21+05:30</lastmod>
   </url><url>
     <loc>https://www.codewithchai.com/authors/</loc>
@@ -17,31 +11,13 @@
     <loc>https://www.codewithchai.com/categories/</loc>
     <lastmod>2023-12-22T13:51:21+05:30</lastmod>
   </url><url>
-    <loc>https://www.codewithchai.com/categories/general/</loc>
-    <lastmod>2023-12-22T13:51:21+05:30</lastmod>
-  </url><url>
-    <loc>https://www.codewithchai.com/my-first-post/</loc>
-    <lastmod>2023-12-22T13:51:21+05:30</lastmod>
-  </url><url>
-    <loc>https://www.codewithchai.com/my-fourth-post/</loc>
-    <lastmod>2023-12-22T13:51:21+05:30</lastmod>
-  </url><url>
     <loc>https://www.codewithchai.com/</loc>
-    <lastmod>2023-12-22T13:51:21+05:30</lastmod>
-  </url><url>
-    <loc>https://www.codewithchai.com/my-second-post/</loc>
-    <lastmod>2023-12-22T13:51:21+05:30</lastmod>
-  </url><url>
-    <loc>https://www.codewithchai.com/my-third-post/</loc>
     <lastmod>2023-12-22T13:51:21+05:30</lastmod>
   </url><url>
     <loc>https://www.codewithchai.com/categories/programming/</loc>
     <lastmod>2023-12-22T13:51:21+05:30</lastmod>
   </url><url>
     <loc>https://www.codewithchai.com/my-fifth-post/</loc>
-    <lastmod>2023-12-22T13:51:21+05:30</lastmod>
-  </url><url>
-    <loc>https://www.codewithchai.com/categories/tech/</loc>
     <lastmod>2023-12-22T13:51:21+05:30</lastmod>
   </url>
 </urlset>
