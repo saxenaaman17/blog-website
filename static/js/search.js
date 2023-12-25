@@ -1,12 +1,15 @@
 let resultsElement, searchElement, pagesIndex, lunrIndex;
 
 function initLunr() {
-  const request = new XMLHttpRequest();
-  request.open("GET", "js/lunr/PagesIndex.json", true);
-
-  request.onload = function () {
-    if (request.status >= 200 && request.status < 400) {
-      pagesIndex = JSON.parse(request.responseText);
+  fetch("js/lunr/PagesIndex.json")
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      return response.json();
+    })
+    .then((data) => {
+      pagesIndex = data;
       // console.log("Index loaded:", pagesIndex);
 
       lunrIndex = lunr(function () {
@@ -18,12 +21,10 @@ function initLunr() {
         // Adding pages to the Lunr index
         pagesIndex.forEach((page) => this.add(page));
       });
-    } else {
-      // console.error("Error getting Hugo index file:", request.statusText);
-    }
-  };
-
-  request.send();
+    })
+    .catch((error) => {
+      // console.error("Error getting Hugo index file:", error);
+    });
 }
 
 function initUI() {
@@ -33,14 +34,13 @@ function initUI() {
   searchElement.addEventListener(
     "input",
     debounce(function () {
-      const query = "programming";
+      const query = searchElement.value.trim();
       if (query.length < 2) return;
 
       const fuzzLength = Math.round(Math.min(Math.max(query.length / 4, 1), 3));
       const fuzzyQuery = query + "~" + fuzzLength;
 
       const results = search(fuzzyQuery);
-      // console.log(results);
       renderResults(results);
     }, 1000)
   );
