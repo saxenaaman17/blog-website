@@ -9,13 +9,6 @@
     <lastBuildDate>Fri, 22 Dec 2023 13:51:21 +0530</lastBuildDate>
     <atom:link href="https://www.codewithchai.com/authors/aman-saxena/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>My Fifth Post</title>
-      <link>https://www.codewithchai.com/my-fifth-post/</link>
-      <pubDate>Fri, 22 Dec 2023 13:51:21 +0530</pubDate>
-      <guid>https://www.codewithchai.com/my-fifth-post/</guid>
-      <description>this is my first post</description>
-    </item>
-    <item>
       <title>My fourth Post</title>
       <link>https://www.codewithchai.com/my-fourth-post/</link>
       <pubDate>Fri, 22 Dec 2023 13:51:21 +0530</pubDate>
@@ -35,6 +28,13 @@
       <pubDate>Fri, 22 Dec 2023 13:51:21 +0530</pubDate>
       <guid>https://www.codewithchai.com/my-third-post/</guid>
       <description>this is my first post</description>
+    </item>
+    <item>
+      <title>Promise.all v Promise.allSettled</title>
+      <link>https://www.codewithchai.com/my-fifth-post/</link>
+      <pubDate>Fri, 22 Dec 2023 13:51:21 +0530</pubDate>
+      <guid>https://www.codewithchai.com/my-fifth-post/</guid>
+      <description>Promise.all Promise.all() takes an array of promises as input and it returns a single Promise. And that single promise resolves when all the promises in the array have resolved, or it rejects immediately upon any of the promises rejecting.&#xA;If all the promises in the array resolve successfully, Promise.all() resolves with an array containing the resolved values of each promise, maintaining the order of the original array. If any of the promises in the array rejects, Promise.</description>
     </item>
   </channel>
 </rss>

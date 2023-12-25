@@ -262,6 +262,7 @@ a {
   flex: 3;
   font-size: 20px;
   line-height: 32px;
+  width: 100%;
 }
 
 .singleContent p,
@@ -276,10 +277,14 @@ a {
   object-fit: cover;
 }
 
-.singleContent pre {
+/* .singleContent pre {
   width: 100%;
   overflow-x: scroll;
   padding: 20px;
+} */
+
+div.highlight pre {
+  padding: 20px 10px;
 }
 
 .singleRightBar {
@@ -307,6 +312,20 @@ a {
 
 /* rightbar start */
 
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #ccc;
+}
+
 
 @media (max-width: 1536px) {
   .container {
@@ -317,6 +336,10 @@ a {
 @media (max-width: 1366px) {
   .container {
     max-width: 1280px;
+  }
+  div.highlight {
+    width: 100%;
+    overflow-x: scroll;
   }
 }
 
@@ -365,5 +388,19 @@ a {
 @media (max-width: 640px) {
   .container {
     max-width: 475px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    max-width: 440px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 420px) {
+  .links {
+    padding-left: 10px;
   }
 }
