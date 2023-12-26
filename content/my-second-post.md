@@ -3,9 +3,9 @@ title = 'var, let and const'
 date = 2023-12-26T12:31:43+05:30
 draft = false
 description = "Mastering Scope with var, let & const"
-image = "/images/4s.webp"
-imageBig = "/images/4b.webp"
-categories = ["general"]
+image = "/images/js.svg"
+imageBig = "/images/coding.webp"
+categories = ["programming"]
 authors = ["Aman Saxena"]
 avatar="/images/avatar.webp"
 +++
