@@ -213,10 +213,13 @@ a {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  width: 100%;
 }
 
 .singleHeadTitle {
   font-size: 48px;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
 }
 
 .singleHeadDesc {
