@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content=This&#32;is&#32;a&#32;description/>
+    <meta name="description" content=Mastering&#32;Scope&#32;with&#32;var,&#32;let&#32;&amp;&#32;const/>
     <link rel="stylesheet" href="/styles/style.css" />
     
-    <title>My Second Post</title>
+    <title>var, let and const</title>
   </head>
   <body>
     <div class="container">
@@ -95,8 +95,8 @@
 <div class="single">
   <div class="singleHead">
     <div class="singleHeadText">
-      <h1 class="singleHeadTitle">My Second Post</h1>
-      <p class="singleHeadDesc">This is a description</p>
+      <h1 class="singleHeadTitle">var, let and const</h1>
+      <p class="singleHeadDesc">Mastering Scope with var, let &amp; const</p>
       <div class="singleHeadDetail">
         <img
           src="/images/avatar.webp"
@@ -111,20 +111,159 @@
         </span>
         <span>
           
-          <a href="https://www.codewithchai.com/categories/abc/" class="singleCategory">abc</a>
-          
           <a href="https://www.codewithchai.com/categories/programming/" class="singleCategory">programming</a>
-          
-          <a href="https://www.codewithchai.com/categories/tech/" class="singleCategory">tech</a>
           
         </span>
       </div>
-      <time>Dec 22, 2023</time>
+      <time>Dec 26, 2023</time>
     </div>
-    <img src="/images/2b.webp" alt="My Second Post" class="singleHeadImage" />
+    <img src="/images/coding.webp" alt="var, let and const" class="singleHeadImage" />
   </div>
   <div class="singleBottom">
-    <div class="singleContent"><p>this is my first post</p>
+    <div class="singleContent"><p>First of all, before going into the details of var, let and const, let us understand what are scopes in js ?</p>
+<p>Scopes in js can be defined as a set of variables, objects and functions that you have access to inside a js program. And scopes are of three types:-</p>
+<ol>
+<li>Global scope - Global scope refers to variables, functions, or objects that are accessible from anywhere in your code.</li>
+<li>Function scope - Function scope refers to variables or functions that are accessible only within the function they are defined in.</li>
+<li>Block scope - It was introduced in ES6. Block scope refers to variables declared using let or const that are accessible only within the block they are defined in, generaly within curly braces {}.</li>
+</ol>
+<h2 id="var">var</h2>
+<ul>
+<li>Variables declared with var are function-scoped.</li>
+<li>&lsquo;var&rsquo; variables are hosited at the top of their scope which essentially means they can be accessed before they are declared.</li>
+<li>&lsquo;var&rsquo; variables can be redeclared and reassigned.</li>
+</ul>
+<h3 id="example">Example</h3>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">hello</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">varVariable</span>); <span style="color:#75715e">// accessible here because var variables are hoisted to 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                            <span style="color:#75715e">// the top of their function scope but 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                            <span style="color:#75715e">// will have undefined value because their assignments are not hoisted
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">true</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">varVariable</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Aman&#34;</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">varVariable</span>); <span style="color:#75715e">// we can access this variable outside curly braces because 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                            <span style="color:#75715e">// it has function scpoe not block scope
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">varVariable</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Aman Saxena&#34;</span>; <span style="color:#75715e">// can be reassigned and redeclare too
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">varVariable</span>); <span style="color:#75715e">// this statement will give an error because we are trying to access
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                          <span style="color:#75715e">// this variable outside its function where it&#39;s declared
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">hello</span>();</span></span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="let">let</h2>
+<ul>
+<li>Variables declared with let are block-scoped which means they are only accessible within the nearest enclosing {} block.</li>
+<li>&rsquo;let&rsquo; variables are not hoisted to the top of the block which means they exist in the temporal dead zone until the declaration is encountered.</li>
+<li>&rsquo;let&rsquo; variables can be reassigned but not redeclared within the same block.</li>
+</ul>
+<h3 id="example-1">Example</h3>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">hello</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">true</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">letVariable</span>); <span style="color:#75715e">// this will give an error because let variables are not hoisted 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                              <span style="color:#75715e">// to the top of their scope
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">letVariable</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Aman&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">letVariable</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Aman Saxena&#34;</span>; <span style="color:#75715e">// can be reassigned
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">letVariable</span>); <span style="color:#75715e">// this will give an error because 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                            <span style="color:#75715e">// let variables can only be accessed inside their nearest {}
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">hello</span>();</span></span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="const">const</h2>
+<ul>
+<li>Variables declared with const are also block-scoped.</li>
+<li>&lsquo;const&rsquo; variables are not hoisted to the top of the block which means they exist in the temporal dead zone until the declaration is encountered.</li>
+<li>&lsquo;const&rsquo; variables can not be reassigned after they are initialized but the contents of a const object or array (if it&rsquo;s mutable) can be modified.</li>
+</ul>
+<h3 id="example-2">Example</h3>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">hello</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Aman&#34;</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Aman Saxena&#39;</span>; <span style="color:#75715e">// This will throw an error, reassignment is not allowed 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">myArray</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>];
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">myArray</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>]; <span style="color:#75715e">// When we try to reassign the entire array to a const variable, 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                       <span style="color:#75715e">// it will throw an error
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">myArray</span>.<span style="color:#a6e22e">push</span>(<span style="color:#ae81ff">4</span>); <span style="color:#75715e">// This is allowed, modifies the array
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">myObject</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">key</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;value1&#39;</span> };
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">myObject</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">key</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;value2&#39;</span> }; <span style="color:#75715e">// When we try to reassign the entire object to a const variable,
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                                <span style="color:#75715e">// it will throw an error
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">myObject</span>.<span style="color:#a6e22e">key</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;new value&#39;</span>; <span style="color:#75715e">// This is allowed, modifies the object
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">myObject</span>, <span style="color:#a6e22e">myArray</span>); <span style="color:#75715e">// Accessible and mutable within the block
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">hello</span>();</span></span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
     
   </div>
@@ -277,7 +416,7 @@
       </svg>
     </a>
 
-    <a href="/" aria-label="LinkedIn">
+    <a href="https://www.linkedin.com/in/aman-s-8a24379a/" aria-label="LinkedIn" target="_blank">
       <svg
         width="32px"
         height="32px"

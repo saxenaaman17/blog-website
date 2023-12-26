@@ -6,13 +6,20 @@
     <description>Recent content in programming on My programming learnings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 22 Dec 2023 13:51:21 +0530</lastBuildDate>
+    <lastBuildDate>Tue, 26 Dec 2023 12:31:43 +0530</lastBuildDate>
     <atom:link href="https://www.codewithchai.com/categories/programming/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>var, let and const</title>
+      <link>https://www.codewithchai.com/my-second-post/</link>
+      <pubDate>Tue, 26 Dec 2023 12:31:43 +0530</pubDate>
+      <guid>https://www.codewithchai.com/my-second-post/</guid>
+      <description>First of all, before going into the details of var, let and const, let us understand what are scopes in js ?&#xA;Scopes in js can be defined as a set of variables, objects and functions that you have access to inside a js program. And scopes are of three types:-&#xA;Global scope - Global scope refers to variables, functions, or objects that are accessible from anywhere in your code. Function scope - Function scope refers to variables or functions that are accessible only within the function they are defined in.</description>
+    </item>
+    <item>
       <title>Promise.all v Promise.allSettled</title>
-      <link>https://www.codewithchai.com/my-fifth-post/</link>
+      <link>https://www.codewithchai.com/my-first-post/</link>
       <pubDate>Fri, 22 Dec 2023 13:51:21 +0530</pubDate>
-      <guid>https://www.codewithchai.com/my-fifth-post/</guid>
+      <guid>https://www.codewithchai.com/my-first-post/</guid>
       <description>Promise.all Promise.all() takes an array of promises as input and it returns a single Promise. And that single promise resolves when all the promises in the array have resolved, or it rejects immediately upon any of the promises rejecting.&#xA;If all the promises in the array resolve successfully, Promise.all() resolves with an array containing the resolved values of each promise, maintaining the order of the original array. If any of the promises in the array rejects, Promise.</description>
     </item>
   </channel>
