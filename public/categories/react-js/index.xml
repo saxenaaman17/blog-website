@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>react js on My programming learnings</title>
+    <link>https://www.codewithchai.com/categories/react-js/</link>
+    <description>Recent content in react js on My programming learnings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 29 Dec 2023 14:48:08 +0530</lastBuildDate>
+    <atom:link href="https://www.codewithchai.com/categories/react-js/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Redux Simplified: Basics of Redux</title>
+      <link>https://www.codewithchai.com/my-third-post/</link>
+      <pubDate>Fri, 29 Dec 2023 14:48:08 +0530</pubDate>
+      <guid>https://www.codewithchai.com/my-third-post/</guid>
+      <description>Redux is a pattern and library for managing and updating application state, using events called &amp;ldquo;actions&amp;rdquo; so that the state can only be updated in a predictable fashion. &amp;ldquo;Application state&amp;rdquo; here means state which needs to be used across your entire application or many parts of your application.so we can consider this state as &amp;ldquo;global state&amp;rdquo; for our application. And to update the state in predictable fashion, we don&amp;rsquo;t directly modify the state.</description>
+    </item>
+  </channel>
+</rss>

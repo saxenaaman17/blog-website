@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content=This&#32;is&#32;a&#32;description/>
+    <meta name="description" content=Streamline&#32;your&#32;JS&#32;apps&#32;with&#32;Redux&#32;for&#32;efficient,&#32;predictable&#32;state&#32;handling./>
     <link rel="stylesheet" href="/styles/style.css" />
     
-    <title>My third Post</title>
+    <title>Redux Simplified: Basics of Redux</title>
   </head>
   <body>
     <div class="container">
@@ -95,8 +95,8 @@
 <div class="single">
   <div class="singleHead">
     <div class="singleHeadText">
-      <h1 class="singleHeadTitle">My third Post</h1>
-      <p class="singleHeadDesc">This is a description</p>
+      <h1 class="singleHeadTitle">Redux Simplified: Basics of Redux</h1>
+      <p class="singleHeadDesc">Streamline your JS apps with Redux for efficient, predictable state handling.</p>
       <div class="singleHeadDetail">
         <img
           src="/images/avatar.webp"
@@ -111,18 +111,64 @@
         </span>
         <span>
           
-          <a href="https://www.codewithchai.com/categories/general/" class="singleCategory">general</a>
-          
           <a href="https://www.codewithchai.com/categories/programming/" class="singleCategory">programming</a>
+          
+          <a href="https://www.codewithchai.com/categories/react-js/" class="singleCategory">react js</a>
           
         </span>
       </div>
-      <time>Dec 22, 2023</time>
+      <time>Dec 29, 2023</time>
     </div>
-    <img src="/images/3b.webp" alt="My third Post" class="singleHeadImage" />
+    <img src="/images/coding.webp" alt="Redux Simplified: Basics of Redux" class="singleHeadImage" />
   </div>
   <div class="singleBottom">
-    <div class="singleContent"><p>this is my first post</p>
+    <div class="singleContent"><p>Redux is a pattern and library for managing and updating application state, using events called &ldquo;actions&rdquo; so that the state can only be updated in a predictable fashion. <em>&ldquo;Application state&rdquo;</em> here means state which needs to be used across your entire application or many parts of your application.so we can consider this state as <em>&ldquo;global state&rdquo;</em> for our application. And to update the state in predictable fashion, we don&rsquo;t directly modify the state. Instead, we can dispatch actions to let Redux know what changes need to be made.</p>
+<p>An action is a plain JavaScript object that has a type field. We can think of an action as an event that describes something that happened in the application. type field should be a string and this action object can have other fields too for additional information to let redux know about what happened.</p>
+<h3 id="example-of-an-action-object-">Example of an action object:-</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">addProductToCartAction</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">type</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;cart/productAdded&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">payload</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;butter&#34;</span>,
+</span></span><span style="display:flex;"><span>};</span></span></code></pre></div>
+<p>Application state in Redux lives in an object called the store. We can create this store by passing in a reducer and this store object has a method called getState() that returns the current state value.
+So the question arises - what is a reducer ?
+A reducer is a function that receives the current state and an action object and decides how to update the state if necessary, and returns the new state. We must follow some rules in regards to reducer:-</p>
+<ul>
+<li>reducer should only calculate the new state based on state and action arguments.</li>
+<li>reducer are not allowed to modify the existing state. Instead we should make a copy of the existing state and make changes to the copied values and then return it.</li>
+<li>we should avoid doing random calculations, async tasks and side effects in reducer.</li>
+</ul>
+<h3 id="example-of-a-reducer-">Example of a reducer:-</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">initialState</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">value</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;&#34;</span> };
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">cartReducer</span>(<span style="color:#a6e22e">state</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">initialState</span>, <span style="color:#a6e22e">action</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Check to see if the reducer cares about this action
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">action</span>.<span style="color:#a6e22e">type</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;cart/productAdded&#34;</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// If so, make a copy of &#39;state&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">return</span> {
+</span></span><span style="display:flex;"><span>      ...<span style="color:#a6e22e">state</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e">// and update the copy with the new value
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      <span style="color:#a6e22e">value</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">action</span>.<span style="color:#a6e22e">payload</span>
+</span></span><span style="display:flex;"><span>    };
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// otherwise return the existing state unchanged
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">state</span>;
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<h3 id="example-of-a-store-">Example of a store:-</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">configureStore</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;@reduxjs/toolkit&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">store</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">configureStore</span>({ <span style="color:#a6e22e">reducer</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">cartReducer</span> });
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">store</span>.<span style="color:#a6e22e">getState</span>());</span></span></code></pre></div>
+<p>The Redux store has a method called dispatch. The only way to update the state is to call store.dispatch() and pass in an action object. The store will run its reducer function and save the new state value inside, and we can call getState() to retrieve the updated value.
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">store</span>.<span style="color:#a6e22e">dispatch</span>({ <span style="color:#a6e22e">type</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;cart/productAdded&#34;</span> });
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">store</span>.<span style="color:#a6e22e">getState</span>());</span></span></code></pre></div></p>
+<p>Now, to access the application state stored in store object, we mostly use <em>Selectors</em>. Selectors are functions which can extract specific piece of information from store state value. So in large applications, this can help us in avoiding repeating logic if different parts of the app need to read the same data from state.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">selectCartValue</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">state</span> =&gt; <span style="color:#a6e22e">state</span>.<span style="color:#a6e22e">value</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">currentCartValue</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">selectCartValue</span>(<span style="color:#a6e22e">store</span>.<span style="color:#a6e22e">getState</span>());
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">currentCartValue</span>);</span></span></code></pre></div>
+<p><em><strong>Note:-</strong></em> almost all the stuff here in this post, can also be found on official redux js documentation on this link - <a href="https://redux.js.org/tutorials/essentials/part-1-overview-concepts" target="_blank" rel="noopener noreferrer">click here</a></p>
 </div>
     
   </div>
@@ -275,7 +321,7 @@
       </svg>
     </a>
 
-    <a href="/" aria-label="LinkedIn">
+    <a href="https://www.linkedin.com/in/aman-s-8a24379a/" aria-label="LinkedIn" target="_blank">
       <svg
         width="32px"
         height="32px"
