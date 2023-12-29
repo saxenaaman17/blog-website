@@ -5,7 +5,7 @@ draft = false
 description = "Mastering Scope with var, let & const"
 image = "/images/js.svg"
 imageBig = "/images/coding.webp"
-categories = ["programming"]
+categories = ["programming", "javascript"]
 authors = ["Aman Saxena"]
 avatar="/images/avatar.webp"
 +++

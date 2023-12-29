@@ -5,7 +5,7 @@ draft = false
 description = 'From "all or nothing" to "every outcome matters"'
 image = "/images/js.svg"
 imageBig = "/images/coding.webp"
-categories = ["programming"]
+categories = ["programming", "javascript"]
 authors = ["Aman Saxena"]
 avatar="/images/avatar.webp"
 +++

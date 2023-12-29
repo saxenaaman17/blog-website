@@ -11,3 +11,8 @@ paginate = 2
 [taxonomies]
   category="categories"
   author="authors"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
