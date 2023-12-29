@@ -6,28 +6,14 @@
     <description>Recent content in general on My programming learnings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 22 Dec 2023 13:51:21 +0530</lastBuildDate>
+    <lastBuildDate>Fri, 29 Dec 2023 21:45:45 +0530</lastBuildDate>
     <atom:link href="https://www.codewithchai.com/categories/general/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>My First Post</title>
-      <link>https://www.codewithchai.com/my-first-post/</link>
-      <pubDate>Fri, 22 Dec 2023 13:51:21 +0530</pubDate>
-      <guid>https://www.codewithchai.com/my-first-post/</guid>
-      <description>this is my first post</description>
-    </item>
-    <item>
-      <title>My fourth Post</title>
+      <title>Behind the Scenes of a Web Page</title>
       <link>https://www.codewithchai.com/my-fourth-post/</link>
-      <pubDate>Fri, 22 Dec 2023 13:51:21 +0530</pubDate>
+      <pubDate>Fri, 29 Dec 2023 21:45:45 +0530</pubDate>
       <guid>https://www.codewithchai.com/my-fourth-post/</guid>
-      <description>this is my first post</description>
-    </item>
-    <item>
-      <title>My third Post</title>
-      <link>https://www.codewithchai.com/my-third-post/</link>
-      <pubDate>Fri, 22 Dec 2023 13:51:21 +0530</pubDate>
-      <guid>https://www.codewithchai.com/my-third-post/</guid>
-      <description>this is my first post</description>
+      <description>When we type a URL into your browser or click on a link, browser sends this request to a DNS server to find the IP address associated with the URL. IP (Internet Protocol) address, is a unique identifier assigned to each device connected to a computer network that uses the Internet Protocol for communication. The browser sends a request to the server at the resolved IP address using the HTTP/HTTPS protocol (a set of rules for transferring webpage data over the internet).</description>
     </item>
   </channel>
 </rss>
