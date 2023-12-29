@@ -1,8 +1,15 @@
-:root {
+/* :root {
   --bg: #0b1529;
   --bgSoft: #1f3050;
   --text: #dee4eb;
   --textSoft: #cbd2d9;
+} */
+
+:root {
+  --bg: #120d26;
+  --bgSoft: #2c1a4b;
+  --text: #e2e2ff;
+  --textSoft: #c0b6dd;
 }
 
 * {
