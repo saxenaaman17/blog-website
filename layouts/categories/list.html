@@ -1,7 +1,7 @@
 {{ define "main" }}
 {{ if eq .RelPermalink "/categories/" }}
   {{ range $.Site.Taxonomies.categories.ByCount }}
-  <a href="/categories/{{.Name}}">
+  <a href="/categories/{{.Name}}" class="categoryName">
     # {{.Name}} <small>{{.Count}}</small>
   </a>
   {{ end }}

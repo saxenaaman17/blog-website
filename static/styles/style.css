@@ -330,7 +330,15 @@ div.highlight pre {
   display: none;
 }
 
-/* rightbar start */
+/* rightbar end */
+
+/* categories start */
+
+.categoryName {
+  font-weight: 700;
+}
+
+/* categories end */
 
 ::-webkit-scrollbar {
   width: 10px;
