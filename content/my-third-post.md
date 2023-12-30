@@ -15,7 +15,7 @@ Redux is a pattern and library for managing and updating application state, usin
 An action is a plain JavaScript object that has a type field. We can think of an action as an event that describes something that happened in the application. type field should be a string and this action object can have other fields too for additional information to let redux know about what happened.
 
 ### Example of an action object:-
-{{< highlight js >}}
+{{< highlight js "linenos=table" >}}
 const addProductToCartAction = {
   type: "cart/productAdded",
   payload: "butter",
@@ -30,7 +30,7 @@ A reducer is a function that receives the current state and an action object and
 - we should avoid doing random calculations, async tasks and side effects in reducer.
 
 ### Example of a reducer:-
-{{< highlight js >}}
+{{< highlight js "linenos=table" >}}
 const initialState = { value: "" };
 
 function cartReducer(state = initialState, action) {
@@ -49,7 +49,7 @@ function cartReducer(state = initialState, action) {
 {{</ highlight >}}
 
 ### Example of a store:-
-{{< highlight js >}}
+{{< highlight js "linenos=table" >}}
 import { configureStore } from "@reduxjs/toolkit";
 
 const store = configureStore({ reducer: cartReducer });
@@ -58,7 +58,7 @@ console.log(store.getState());
 {{</ highlight >}}
 
 The Redux store has a method called dispatch. The only way to update the state is to call store.dispatch() and pass in an action object. The store will run its reducer function and save the new state value inside, and we can call getState() to retrieve the updated value.
-{{< highlight js >}}
+{{< highlight js "linenos=table" >}}
 store.dispatch({ type: "cart/productAdded" });
 
 console.log(store.getState());
@@ -66,7 +66,7 @@ console.log(store.getState());
 
 Now, to access the application state stored in store object, we mostly use *Selectors*. Selectors are functions which can extract specific piece of information from store state value. So in large applications, this can help us in avoiding repeating logic if different parts of the app need to read the same data from state.
 
-{{< highlight js >}}
+{{< highlight js "linenos=table" >}}
 const selectCartValue = state => state.value;
 
 const currentCartValue = selectCartValue(store.getState());
